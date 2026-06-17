@@ -1,0 +1,161 @@
+.FooterSection{
+    background: #101010;
+    min-height: 527px;
+    padding: 100px 0px 0px 0px;
+    overflow: hidden;
+}
+.FooterSection .FooterData{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.FooterSection .FooterData .FooterTopDiv{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 24px;
+    position: relative;
+    &::after{
+        content: " ";
+        background: #fff;
+        width: 250%;
+        height: 0.5px;
+        position: absolute;
+        bottom: -65px;
+        left: -100%;
+    }
+}
+.FooterSection .FooterData .FooterTopDiv .FtLeftItem{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.FooterSection .FooterData .FooterTopDiv .FtLeftItem img{
+    height: auto;
+}
+.FooterSection .FooterData .FooterTopDiv .FtLeftItem p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF99;
+}
+.FooterSection .FooterData .FooterTopDiv .FtLeftItem .FtSocialDiv{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.FooterSection .FooterData .FooterTopDiv .FtLeftItem .FtSocialDiv a{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    border: 0.5px solid #FFFFFF99;
+    color: #FFFFFF;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out , color 0.3s ease-in-out;
+    &:hover{
+        background: #FFFFFF99;
+        color: #101010;
+    }
+}
+.FooterSection .FooterData .FooterTopDiv .FtMidItem{
+    display: flex;
+    gap: 55px;
+    justify-content: space-around;
+}
+.FooterSection .FooterData .FooterTopDiv .FtMidItem .FtItems{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+}
+.FooterSection .FooterData .FooterTopDiv .FtMidItem .FtItems h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.FooterSection .FooterData .FooterTopDiv .FtMidItem .FtItems ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.FooterSection .FooterData .FooterTopDiv .FtMidItem .FtItems ul li a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #FFFFFF99;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    &:hover{
+        color: #e22725;
+    }
+}
+.FooterSection .FooterData .FooterTopDiv .FtMidItem .FtItems ul li a svg{
+    color: #e22725;
+}
+.FooterSection .FooterData .FooterTopDiv .FtRytItem{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.FooterSection .FooterData .FooterTopDiv .FtRytItem:last-child{
+    padding-left: 70px;
+}
+.FooterSection .FooterData .FooterTopDiv .FtRytItem .CntItem{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.FooterSection .FooterData .FooterTopDiv .FtRytItem .CntItem h6{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+.FooterSection .FooterData .FooterTopDiv .FtRytItem .CntItem h6 svg{
+    color: #e22725;
+}
+.FooterSection .FooterData .FooterTopDiv .FtRytItem .CntItem p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF99;
+}
+.FooterSection .FooterData .FooterTopDiv .FtRytItem .CntItem p a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF99;
+    &:hover{
+        color: #e22725;
+    }
+}
+.FooterSection .FooterData .FooterBottomDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+}
+.FooterSection .FooterData .FooterBottomDiv p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF99;
+}
+.FooterSection .FooterData .FooterBottomDiv .PolicyDiv{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.FooterSection .FooterData .FooterBottomDiv .PolicyDiv a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF99;
+    &:hover{
+        color: #e22725;
+    }
+}
+
+
