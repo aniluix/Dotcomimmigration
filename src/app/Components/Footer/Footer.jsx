@@ -2,84 +2,34 @@
 import React from 'react'
 import "./Footer.css"
 import Link from 'next/link'
-import { Container } from 'react-bootstrap'
-import { FaCheck, FaFacebook, FaInstagram, FaLinkedin, FaRegClock, FaYoutube } from 'react-icons/fa'
-import { FaLocationDot, FaXTwitter } from 'react-icons/fa6'
-import Image from 'next/image';
-import { MdEmail } from 'react-icons/md';
+import { Container } from 'react-bootstrap';
 
 function Footer() {
   return (
     <>
-    <footer className='FooterSection'>
-        <Container>
-            <div className="FooterData">
 
-              <div className="FooterTopDiv">
-                <div className="FtLeftItem">
-                  <Image src="/Images/headerlogo.png" alt="headerlogo" width={250} height={250}priority />
-                  {/* <Image src="/Images/footerlogo.png" alt="logo" width={190} height={39}priority /> */}
-                  <p>We provide trusted legal representation with a strategic approach, delivering clear guidance, strong advocacy, and reliable solutions for individuals and businesses seeking justice, protection, and long-term legal confidence.</p>
-                  <div className="FtSocialDiv">
-                    <Link href="#"><FaFacebook size={18} /></Link>
-                    <Link href="#"><FaXTwitter size={18} /></Link>
-                    <Link href="#"><FaYoutube size={18} /></Link>
-                    <Link href="#"><FaLinkedin size={18} /></Link>
-                    <Link href="#"><FaInstagram size={18} /></Link>
-                  </div>
-                </div>
-                <div className="FtMidItem">
-                  <div className="FtItems">
-                    <h4>Company</h4>
-                    <ul>
-                      <li><Link href="#">Home</Link></li>
-                      <li><Link href="#">Practice Area</Link></li>
-                      <li><Link href="#">Case Studies</Link></li>
-                      <li><Link href="#">About</Link></li>
-                      <li><Link href="#">Blog</Link></li>
-                      <li><Link href="#">Contact</Link></li>
-                    </ul>
-                  </div>
-                  <div className="FtItems">
-                    <h4>Our Service</h4>
-                    <ul>
-                      <li><Link href="#"><FaCheck size={14} /> Personal Injury</Link></li>
-                      <li><Link href="#"><FaCheck size={14} /> Criminal Defense</Link></li>
-                      <li><Link href="#"><FaCheck size={14} /> Family Law</Link></li>
-                      <li><Link href="#"><FaCheck size={14} /> Employment Law</Link></li>
-                      <li><Link href="#"><FaCheck size={14} /> Real Estate Law</Link></li>
-                      <li><Link href="#"><FaCheck size={14} /> Corporate Law</Link></li>
-                      <li><Link href="#"><FaCheck size={14} /> Civil Litigation</Link></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="FtRytItem">
-                  <div className="CntItem">
-                    <h6><FaRegClock size={18} /> We're Open</h6>
-                    <p>Monday – Sunday 06.00 – 23.00</p>
-                  </div>
-                  <div className="CntItem">
-                    <h6><FaLocationDot size={18} /> Office Location</h6>
-                    <p>ptj sjs Canada </p>
-                    <p><Link href="tell:+91-65848752">+91-65848752</Link></p>
-                  </div>
-                  <div className="CntItem">
-                    <h6><MdEmail size={18} /> Send a Message</h6>
-                    <p><Link href="mailto:contact@calmind.com">contact@calmind.com</Link></p>
-                  </div>
-                </div>
-              </div>
+    <footer className="FooterSection">
+      <Container fluid className="container-xl">
+        <div className="FooterData">
 
-              <div className="FooterBottomDiv">
-                <p>Copyright – Regalis by Reacthemes</p>
-                <div className="PolicyDiv">
-                  <Link href="#">Terms & Conditions</Link>
-                  <Link href="#">Privacy Policy</Link>
-                </div>
-              </div>
-
+          <div className="footer-inner">
+            <div className="footer-logo">
+              <h4>Dot.Com Immigration</h4>
             </div>
-        </Container>
+            <div className="footer-links">
+              <Link href="#about">About</Link>
+              <Link href="#services">Services</Link>
+              <Link href="#why-us">Why Us</Link>
+              <Link href="#contact">Contact</Link>
+            </div>
+          </div>
+          <p className="footer-copy">© 2026 Dot.Com Immigration · Angad Sachdeva RCIC-IRB · Canada Licence R518464 · India Licence MA/MC2/39 · Kingston, Ontario · info@dotcomimmigration.com · (647) 518-5500<br/>
+          <span >Regulated by the College of Immigration and Citizenship Consultants (CICC). This website is for informational purposes only and does not constitute legal advice.</span></p>
+          <div className="Copyright">
+            <p>Designed By - <Link target='_blank' href="https://anilkuix.lovable.app">Anil Kumar </Link></p>
+          </div>
+        </div>
+      </Container>
     </footer>
       
     </>

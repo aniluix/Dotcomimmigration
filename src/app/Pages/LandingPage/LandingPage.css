@@ -1,583 +1,689 @@
-/* HeroLandingSec Started  */
-.HeroLandingSec{
-    background:url(/Images/HeroImg.png)no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 50px 0;
-    position: relative;
-    &::after{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 45%;
-        background: linear-gradient(0deg, #213449 0%, #21344900 100%);
-    }
+/* HERO */
+.HeroSection {
+  min-height: 100vh;
+  background: linear-gradient( 135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a2d45 100% );
+  display: flex;
+  align-items: center;
+  padding: 100px 0px;
+  position: relative;
+  overflow: hidden;
+  &:before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(
+      circle,
+      rgba(200, 16, 46, 0.12) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+
+  }
 }
-.HeroLandingSec .HeroLandingData{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    position: relative;
-    z-index: 1;
+.HeroSection .hero-inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
-.HeroLandingSec .HeroLandingData .HeroHeading{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.HeroSection .hero-inner .hero-content{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
-.HeroLandingSec .HeroLandingData .HeroHeading span{
-    background: #FFFFFF33;
-    width: fit-content;
-    padding: 5px 10px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 3px;
+.HeroSection .hero-inner .hero-content .HeroHead{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.HeroLandingSec .HeroLandingData .HeroHeading h2{
-    font-size: 60px;
-    color: #FFFFFF;
-    font-weight: 600;
+.HeroSection .hero-inner .hero-content .HeroHead .hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-.HeroLandingSec .HeroLandingData .HeroHeadingParaDiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.HeroSection .hero-inner .hero-content .HeroHead .hero-eyebrow .eyebrow-line {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
 }
-.HeroLandingSec .HeroLandingData .HeroHeadingParaDiv p {
-    width: 50%;
-    color: #FFFFFF99;
-    font-size: 16px;
-    line-height: 30px;
+.HeroSection .hero-inner .hero-content .HeroHead .hero-eyebrow .eyebrow-text {
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
-.HeroLandingSec .HeroLandingData .HeroHeadingParaDiv .HeroClientData {
-   display: flex;
-   align-items: center;
-   gap: 20px;
+.HeroSection .hero-inner .hero-content .HeroHead h1 {
+  color: var(--white);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  line-height: 1.1;
 }
-.HeroLandingSec .HeroLandingData .HeroHeadingParaDiv .HeroClientData .ClntItems {
-   display: flex;
-   align-items: flex-end;
-   flex-direction: column;
-   text-align: end;
-   width: 100%;
+.HeroSection .hero-inner .hero-content .HeroHead h1 span {
+  color: var(--red);
+  font-family: var(--body-font);
 }
-.HeroLandingSec .HeroLandingData .HeroHeadingParaDiv .HeroClientData .ClntItems h4 {
-   font-size: 18px;
-   color: #fff;
-   font-weight: 600;
+.HeroSection .hero-inner .hero-content p {
+  color: var(--white);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 480px;
+  font-family: var(--heading-font);
 }
-.HeroLandingSec .HeroLandingData .HeroHeadingParaDiv .HeroClientData .ClntItems p{
-   width: 100%;
-   color: #fff;
-   font-size: 14px;
-   font-weight: 500;
+.HeroSection .hero-inner .hero-content p span {
+  font-weight: 600;
 }
-.HeroLandingSec .HeroLandingData .HeroHeadingParaDiv .HeroClientData img {
-   width: 100%;
-   height: auto;
+.HeroSection .hero-inner .hero-content .hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
-.HeroLandingSec .HeroLandingData .HeroCaseData {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 0px;
-   margin-top: 50px;
+.HeroSection .hero-inner .hero-content .hero-buttons .btn-primary {
+  background: var(--red);
+  color: white;
+  padding: 15px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background 0.2s,transform 0.15s;
+  &:hover {
+    background: var(--red-light);
+    transform: translateY(-1px);
+  }
 }
-.HeroLandingSec .HeroLandingData .HeroCaseData h5{
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 30px;
-    color:#FFFFFF;
+.HeroSection .hero-inner .hero-content .hero-buttons .btn-outline {
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 15px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: border-color 0.2s, background 0.2s;
+  &:hover{
+    border-color: var(--gold);
+    background: rgba(201, 168, 76, 0.08);
+  }
 }
-/* HeroLandingSec Ended  */
+.HeroSection .hero-inner .hero-image-wrap {
+  position: relative;
+  text-align: end;
+}
+.HeroSection .hero-inner .hero-image-wrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.4);
+}
+.HeroSection .hero-inner .hero-image-wrap .hero-badge {
+  background: var(--white);
+  border-radius: 6px;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  display: flex;
+  position: absolute;
+  bottom: -12px;
+  left: -40px;
+  box-shadow: 0 8px 32px #00000026;
+}
+.HeroSection .hero-inner .hero-image-wrap .hero-badge .badge-icon {
+  font-size: 1.6rem;
+}
+.HeroSection .hero-inner .hero-image-wrap .hero-badge .badge-text p {
+  font-size: 0.75rem;
+  color: var(--navy-mid);
+}
+.HeroSection .hero-inner .hero-image-wrap .hero-badge .badge-text strong {
+  font-size: 0.9rem;
+  color: var(--navy);
+}
+
+/* Services Started  */
+.ServicesSec {
+  padding: 100px 60px;
+  background: var(--off-white);
+}
+.ServicesSec .services-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.ServicesSec .services-inner .section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.ServicesSec .services-inner .section-header  span{
+  color: var(--red);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.ServicesSec .services-inner .section-header h2{
+  color: var(--navy);
+  font-size: 42px;
+  font-weight: 600;
+}
+.ServicesSec .services-inner .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.ServicesSec .services-inner .services-grid .service-card {
+  border: 1px solid #eaf0f7;
+  border-radius: 10px;
+  padding: 36px 28px;
+  background: color-mix(in srgb, #f4f7fb, #ffffff 48%);
+  transition: box-shadow 0.25s, border-color 0.25s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &:hover{
+    box-shadow: 0 12px 40px rgba(13, 27, 42, 0.1);
+    border-color: var(--red);
+    transform: translateY(-4px);
+  }
+}
+.ServicesSec .services-inner .services-grid .service-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--red));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.ServicesSec .services-inner .services-grid .service-card:hover::after {
+  transform: scaleX(1);
+}
+.ServicesSec .services-inner .services-grid .service-card .service-icon {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+}
+.ServicesSec .services-inner .services-grid .service-card h3.service-title {
+  font-size: 1.2rem;
+  color: var(--navy);
+  font-weight: 600;
+}
+.ServicesSec .services-inner .services-grid .service-card .service-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+/* Services Ended */
+
+/* Why Choose Us Started  */
+.WhyUsSec {
+  padding: 100px 0px;
+  background: var(--navy);
+}
+.WhyUsSec .why-inner {
+  display: flex;
+  flex-direction: column; 
+  gap: 80px;
+}
+.WhyUsSec .why-inner .section-header{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+.WhyUsSec .why-inner .section-header span{
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.WhyUsSec .why-inner .section-header h2{
+  color: var(--white);
+  font-size: 42px;
+  font-weight: 600;
+}
+.WhyUsSec .why-inner .why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.WhyUsSec .why-inner .why-grid .why-item {
+  display: flex;
+  gap: 00px;
+}
+.WhyUsSec .why-inner .why-grid .why-item .why-num {
+  font-size: 2.5rem;
+  color: var(--red);
+  font-weight: 600;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 50px;
+}
+.WhyUsSec .why-inner .why-grid .why-item .why-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.WhyUsSec .why-inner .why-grid .why-item .why-content h3 {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 600;
+}
+.WhyUsSec .why-inner .why-grid .why-item .why-content p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 500px;
+}
+/* Why Choose Us Ended */
+
+/* CompanyLogoSec Started  */
+
+.CompanyLogoSec {
+  padding: 80px 60px;
+  background: #000000 !important;
+}
+.CompanyLogoSec .CompanyLogoData img{
+  width: 100%;
+  height: auto;
+  
+}
+
+
+/* CompanyLogoSec Ended */
+
+/* ContactSec Started  */
+.ContactSec {
+  padding: 100px 60px;
+  background: var(--off-white);
+}
+.ContactSec .ContactData {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.ContactSec .ContactData .Contact-Texed {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.ContactSec .ContactData .Contact-Texed .ContactHead {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ContactSec .ContactData .Contact-Texed .ContactHead span {
+  color: var(--red);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.ContactSec .ContactData .Contact-Texed .ContactHead h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--navy);
+  line-height: 1.2;
+  font-weight: 600;
+}
+.ContactSec .ContactData .Contact-Texed .ContactHead p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 556px;
+}
+.ContactSec .ContactData .Contact-Texed .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ContactSec .ContactData .Contact-Texed .contact-info .contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.ContactSec .ContactData .Contact-Texed .contact-info .contact-item .contact-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--red);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  color: var(--white);
+}
+.ContactSec .ContactData .Contact-Texed .contact-info .contact-item .cont-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ContactSec
+  .ContactData
+  .Contact-Texed
+  .contact-info
+  .contact-item
+  .cont-text
+  h6 {
+  color: var(--navy);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.ContactSec
+  .ContactData
+  .Contact-Texed
+  .contact-info
+  .contact-item
+  .cont-text
+  p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.ContactSec
+  .ContactData
+  .Contact-Texed
+  .contact-info
+  .contact-item
+  .cont-text
+  a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s;
+  &:hover {
+    color: var(--red);
+  }
+}
+.ContactSec .ContactData .Contact-Form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+.ContactSec .ContactData .Contact-Form h3 {
+  font-size: 1.6rem;
+  color: var(--navy);
+  font-family: var(--font-playfair);
+}
+
+.contact-form {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+.contact-form h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 1.5px solid #dde1ea;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: border-color 0.2s;
+  outline: none;
+  box-shadow: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--red);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.form-submit {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 15px 36px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+.form-submit:hover {
+  background: var(--red-light);
+}
+
+/* ContactSec Ended */
 
 /* LegalSection Started  */
-.LegalSection{
-    min-height: 485px;
-    display: flex;
-    align-items: center;
+.LegalSection {
+  min-height: 485px;
+  display: flex;
+  align-items: center;
 }
-.LegalSection .LegalItemsDiv{
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+.LegalSection .LegalItemsDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
-.LegalSection .LegalItemsDiv .LegalItems{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.LegalSection .LegalItemsDiv .LegalItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.LegalSection .LegalItemsDiv .LegalItems h3{
-    color: #000000;
-    font-size: 24px;
+.LegalSection .LegalItemsDiv .LegalItems h3 {
+  color: #000000;
+  font-size: 24px;
 }
-.LegalSection .LegalItemsDiv p{
-    color: #7A7A7A;
-    font-size: 16px;
-    line-height: 24px;
+.LegalSection .LegalItemsDiv p {
+  color: #7a7a7a;
+  font-size: 16px;
+  line-height: 24px;
 }
-.LegalSection .LegalItemsDiv a.btn{
-    font-size: 12px;
-    font-weight: 600;
-    color: #213449;
-    background-color: #EBF0F6;
-    border-radius: 4px ;
-    padding: 6px 15px;
-    width: fit-content;
-    transition: all .4s ease-in-out;
+.LegalSection .LegalItemsDiv a.btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: #213449;
+  background-color: #ebf0f6;
+  border-radius: 4px;
+  padding: 6px 15px;
+  width: fit-content;
+  transition: all 0.4s ease-in-out;
 }
 /* LegalSection Ended */
 
-/* AboutFirmSec Started  */
-
-.AboutFirmSec{
-    padding: 100px 0px;
-    min-height: 728px;
-    background: #EBF0F6;
-    display: flex;
-    align-items: center;
-}
-.AboutFirmSec .AbutFirmData{
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 45px;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .LeftFirmItem{
-    position: relative;
-    height: max-content;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .LeftFirmItem .AbtFirmImage{
-    position: relative;
-    overflow: hidden;
-    border-radius: 24px;
-    transition: transform 0.5s ease-in-out ;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .LeftFirmItem .AbtFirmImage img{
-    width: 100%;
-    border-radius: 24px;
-    transition: transform 0.5s ease-in-out ;
-    &:hover{
-        transform: scale(1.1);
-    }
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .LeftFirmItem .Firmtexted{
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, .15);
-    -webkit-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    display: grid;
-    align-items: center;
-    grid-template-columns: 40% auto;
-    padding: 20px;
-    border-radius: 12px;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .LeftFirmItem .Firmtexted h2{
-    font-size: 60px;
-    color: #FFFFFF;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .LeftFirmItem .Firmtexted h2 span{
-    font-size: 16px;
-    color: #FFFFFF;
-    text-align: center;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .LeftFirmItem .Firmtexted p{
-    font-size: 17px;
-    color: #FFFFFF99;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .RytFirmItem{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .RytFirmItem .FirmTexed{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .RytFirmItem .FirmTexed span{
-    background: #00000013;
-    width: fit-content;
-    padding: 5px 10px;
-    color: 000000;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 3px;
-}
-.AboutFirmSec .AbutFirmData .FirmDataDiv .RytFirmItem .FirmTexed h2{
-    color: #000000;
-    font-size: 48px;
-    line-height: 58px;
-    font-weight: 400;
-}
-.AboutFirmSec .AbutFirmData .FirmLocateDiv{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.AboutFirmSec .AbutFirmData .FirmLocateDiv a{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.AboutFirmSec .AbutFirmData .FirmLocateDiv a svg{
-    color: #213449;
-}
-.AboutFirmSec .AbutFirmData .FirmLocateDiv a .loctitem{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-.AboutFirmSec .AbutFirmData .FirmLocateDiv a .loctitem h6{
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 30px;
-    color: #000000;
-}
-.AboutFirmSec .AbutFirmData .FirmLocateDiv a .loctitem p{
-    font-size: 16px;
-    line-height: 24px;
-    color: #7A7A7A;
-}
-
-
-/* AboutFirmSec ended */
-
-
-
-/* PracticeSec Started  */
-
-.PracticeSec{
-    background: #213449;
-    min-height: 850px;
-    padding: 100px 0px;
-    display: flex;
-    align-items: center;
-}
-.PracticeSec .PracticeData{
-    display: grid;
-    grid-template-columns: 420px 1fr;
-}
-.PracticeSec .PracticeData .PracticeLeftItems{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.PracticeSec .PracticeData .PracticeLeftItems .PrctHead{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.PracticeSec .PracticeData .PracticeLeftItems .PrctHead span{
-    background: #FFFFFF33;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.5em;
-    color: #FFFFFF;
-    width: fit-content;
-    padding: 4px 8px;
-    border-radius: 4px;
-}
-.PracticeSec .PracticeData .PracticeLeftItems .PrctHead h2{
-    font-size: 40px;
-    line-height: 54px;
-    color: #fff;
-}
-.PracticeSec .PracticeData .PracticeLeftItems .PrctHead{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.PracticeSec .PracticeData .PracticeRytItems{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 62px 40px;
-}
-.PracticeSec .PracticeData .PracticeRytItems .PractItems{
-    display: grid;
-    grid-template-columns: 100px auto;
-    align-items: flex-start;
-}
-.PracticeSec .PracticeData .PracticeRytItems .PractItems span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    background: #FFFFFF33;
-}
-.PracticeSec .PracticeData .PracticeRytItems .PractItems .PrctTexted{
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-.PracticeSec .PracticeData .PracticeRytItems .PractItems .PrctTexted h4{
-    font-size: 24px;
-    color: #FFFFFF;
-    font-weight: 400;
-}
-.PracticeSec .PracticeData .PracticeRytItems .PractItems .PrctTexted p{
-    font-size: 16px;
-    color: #FFFFFF99;
-    font-weight: 400;
-    line-height: 24px;
-}
-
-/* PracticeSec Ended  */
-
-
 /* WorkProcessSec Started  */
 
-.WorkProcessSec{
-    padding: 80px 0;
-    display: flex;
-    align-items: center;
-    background: #EBF0F6;
+.WorkProcessSec {
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  background: #ebf0f6;
 }
-.WorkProcessSec .ProcessData{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 55px;
+.WorkProcessSec .ProcessData {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 55px;
 }
-.WorkProcessSec .ProcessData .leftProcess{
-    border-radius: 24px;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out ;
+.WorkProcessSec .ProcessData .leftProcess {
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
 }
-.WorkProcessSec .ProcessData .leftProcess img{
-    transition: translate 0.3s ease-in-out;
-    border-radius: 24px;
-    transition: transform 0.5s ease-in-out ;
-    &:hover{
-        transform: scale(1.1);
-    }
+.WorkProcessSec .ProcessData .leftProcess img {
+  transition: translate 0.3s ease-in-out;
+  border-radius: 24px;
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .WorkProcessSec .ProcessData .RightProcess {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
-.WorkProcessSec .ProcessData .RightProcess .prossshead{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.WorkProcessSec .ProcessData .RightProcess .prossshead {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.WorkProcessSec .ProcessData .RightProcess .prossshead span{
-    background: #00000013;
-    width: fit-content;
-    padding: 5px 10px;
-    color: 000000;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 4px;
+.WorkProcessSec .ProcessData .RightProcess .prossshead span {
+  background: #00000013;
+  width: fit-content;
+  padding: 5px 10px;
+  color: 000000;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
 }
-.WorkProcessSec .ProcessData .RightProcess .prossshead h2{
-    font-size: 40px;
-    line-height: 54px;
-    color: #000000;
+.WorkProcessSec .ProcessData .RightProcess .prossshead h2 {
+  font-size: 40px;
+  line-height: 54px;
+  color: #000000;
 }
-.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
-.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems .CaseItems{
-    display: grid;
-    align-items: flex-start;
-    gap: 22px;
-    grid-template-columns: 50px auto;
+.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems .CaseItems {
+  display: grid;
+  align-items: flex-start;
+  gap: 22px;
+  grid-template-columns: 50px auto;
 }
-.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems .CaseItems span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50%;
+.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems .CaseItems span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  background: #213449;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  &::after {
+    content: " ";
     background: #213449;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    position: relative;
-    &::after{
-        content: " ";
-        background: #213449;
-        width: 1px;
-        height: 78px;
-        position: absolute;
-        bottom: -78px;
-    }
+    width: 1px;
+    height: 78px;
+    position: absolute;
+    bottom: -78px;
+  }
 }
-.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems .CaseItems:last-child span::after{
-    height: 0;
+.WorkProcessSec
+  .ProcessData
+  .RightProcess
+  .ProcessCaseItems
+  .CaseItems:last-child
+  span::after {
+  height: 0;
 }
-.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems .CaseItems .CaseTexed{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.WorkProcessSec
+  .ProcessData
+  .RightProcess
+  .ProcessCaseItems
+  .CaseItems
+  .CaseTexed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems .CaseItems .CaseTexed h4{
-    font-size: 24px;
-    font-weight: 400;
-    color: #000000;
+.WorkProcessSec
+  .ProcessData
+  .RightProcess
+  .ProcessCaseItems
+  .CaseItems
+  .CaseTexed
+  h4 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
 }
-.WorkProcessSec .ProcessData .RightProcess .ProcessCaseItems .CaseItems .CaseTexed p{
-    font-size: 16px;
-    color: #7A7A7A;
-    line-height: 24px;
-    font-weight: 400;
+.WorkProcessSec
+  .ProcessData
+  .RightProcess
+  .ProcessCaseItems
+  .CaseItems
+  .CaseTexed
+  p {
+  font-size: 16px;
+  color: #7a7a7a;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 /* WorkProcessSec Ended */
 
-
 /* CounterSec Started  */
-.CounterSec{
-    background: #2B425D;
-    min-height: 280px;
-    display: flex;
-    align-items: center;
+.CounterSec {
+  background: #2b425d;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
 }
-.CounterSec .CounterData{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+.CounterSec .CounterData {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-.CounterSec .CounterData .CounterItems{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+.CounterSec .CounterData .CounterItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
-.CounterSec .CounterData .CounterItems h2{
-    font-size: 42px;
-    font-weight: 600;
-    color: #FFFFFF;
+.CounterSec .CounterData .CounterItems h2 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #ffffff;
 }
-.CounterSec .CounterData .CounterItems p{
-    font-size: 18px;
-    font-weight: 500;
-    color: #FFFFFF;
+.CounterSec .CounterData .CounterItems p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
 }
 /* CounterSec Ended */
-
-/* FaQSec Started  */
-.FaQSec{
-    background: #FFFFFF;
-    padding: 100px 0px;
-}
-.FaQSec .faq-wrapper{
-    display: grid;
-    grid-template-columns: 420px auto;
-}
-.FaQSec .faq-wrapper .faq-heading{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.FaQSec .faq-wrapper .faq-heading span{
-    background: #00000013;
-    width: fit-content;
-    padding: 5px 10px;
-    color: 000000;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 3px;
-}
-.FaQSec .faq-wrapper .faq-heading h2{
-    font-size: 40px;
-    line-height: 54px;
-    color: #000000;
-}
-.FaQSec .faq-wrapper .faq-content , .RytFirmItem .FirmsTabsDiv  { 
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-.RytFirmItem .FirmsTabsDiv  .tab-content .TabPara { 
-    color: #7A7A7A;
-    font-size: 16px;
-    font-weight: 500;
-}
-.FaQSec .faq-wrapper .faq-content .faq-contentTabs  , .RytFirmItem .FirmsTabsDiv .FirmTabs{ 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border: none;
-    border-bottom: 1px solid #7A7A7A;
-}
-
-.FaQSec .faq-wrapper .faq-content .faq-contentTabs button , .RytFirmItem .FirmsTabsDiv .FirmTabs button{ 
-   background: #02010100;
-   border: none;
-   padding: 0;
-   color: #7A7A7A;
-   font-size: 16px;
-   font-weight: 500;
-   width: 100%;
-   min-height: 48px;
-   border-radius: 0px;
-   &:hover{
-    background: #213449e1;
-    color: #fff;
-   }
-}
-.FaQSec .faq-wrapper .faq-content .faq-contentTabs button.active , .RytFirmItem .FirmsTabsDiv .FirmTabs button.active{ 
-   background: #213449;
-   color: #fff;
-}
-.FaQSec .faq-wrapper .faq-content .FAQACCORDION .accordion-item{
-    border: none;
-    border-bottom: 1px solid #7a7a7a5d;
-    border-radius: 0;
-}
-.FaQSec .faq-wrapper .faq-content .FAQACCORDION .accordion-item:last-child{
-    border: none;
-}
-.FaQSec .faq-wrapper .faq-content .FAQACCORDION .accordion-item button {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 30px;
-    color: #000000;
-}
-.FaQSec .faq-wrapper .faq-content .FAQACCORDION .accordion-item .accordion-header .accordion-button:not(.collapsed){
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    outline: none;
-    background: transparent;
-}
-.FaQSec .faq-wrapper .faq-content .FAQACCORDION .accordion-item .accordion-collapse .accordion-body{
-    color: #7a7a7a;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 1rem 1.25rem;
-}
-
-
-/* FaQSec Ended */

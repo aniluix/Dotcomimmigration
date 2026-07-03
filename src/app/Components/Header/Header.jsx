@@ -6,16 +6,12 @@ import {
   Nav,
   Offcanvas
 } from "react-bootstrap";
-
 import { FaPhoneAlt, FaBars } from "react-icons/fa";
-
 import "./Header.css";
 import Link from "next/link";
-import Image from "next/image";
 
 function Header() {
   const [show, setShow] = useState(false);
-
   const navItems = [
     { name: "Home", link: "#" },
     { name: "About", link: "#" },
@@ -25,17 +21,16 @@ function Header() {
 
   return (
     <>
-      <header className="custom-header">
+      <header className="Custom-Header">
         <Container>
           <div className="header-wrapper">
 
             {/* Logo */}
             <div className="logo">
               <Link href="/">
-                <Image src="/Images/headerlogo.png" alt="headerlogo" width={130} height={250}priority />
+                <h4>Dot.Com Immigration</h4>
               </Link>
             </div>
-
             {/* Desktop Navigation */}
             <Nav className="desktop-nav">
               {navItems.map((item, index) => (
