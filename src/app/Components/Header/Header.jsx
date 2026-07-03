@@ -13,10 +13,11 @@ import Link from "next/link";
 function Header() {
   const [show, setShow] = useState(false);
   const navItems = [
-    { name: "Home", link: "#" },
-    { name: "About", link: "#" },
-    { name: "Services", link: "#" },
-    { name: "Contact Us", link: "#" },
+    { name: "Home", link: "/" },
+    { name: "About", link: "#About" },
+    { name: "Why Us", link: "#why-us" },
+    { name: "Services", link: "#services" },
+    { name: "Contact Us", link: "#Contact" },
   ];
 
   return (

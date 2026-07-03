@@ -17,10 +17,11 @@ function Footer() {
               <h4>Dot.Com Immigration</h4>
             </div>
             <div className="footer-links">
-              <Link href="#about">About</Link>
+              <Link href="/">Home</Link>
+              <Link href="#About">About</Link>
               <Link href="#services">Services</Link>
               <Link href="#why-us">Why Us</Link>
-              <Link href="#contact">Contact</Link>
+              <Link href="#Contact">Contact</Link>
             </div>
           </div>
           <p className="footer-copy">© 2026 Dot.Com Immigration · Angad Sachdeva RCIC-IRB · Canada Licence R518464 · India Licence MA/MC2/39 · Kingston, Ontario · info@dotcomimmigration.com · (647) 518-5500<br/>

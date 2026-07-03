@@ -20,7 +20,7 @@ function LandingPage() {
   return (
     <>
 
-      <section className="HeroSection">
+      <section className="HeroSection" id="About">
         <Container fluid className="container-xl">
           <div className="hero-inner">
             <div className="hero-content">
@@ -361,7 +361,7 @@ function LandingPage() {
         </Container> 
       </section>
 
-      <section className="ContactSec" id="contact">
+      <section className="ContactSec" id="Contact">
         <Container fluid className="container-xl">
           <div className="ContactData">
             <div className="Contact-Texed">
